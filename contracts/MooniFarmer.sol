@@ -365,6 +365,7 @@ contract MooniFarmer is Ownable, ReentrancyGuard {
         emit EmergencyWithdraw(msg.sender, _pid, user.amount);
         user.amount = 0;
         user.rewardDebt = 0;
+        user.rewardDebtForMooni = 0;
     }
 
     // Safe mooni transfer function, just in case if rounding error causes pool to not have enough moonis.
